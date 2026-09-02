@@ -39,7 +39,7 @@
           <div class="stat-sub" v-if="unreadCount"><b style="color:#dc2626">{{ unreadCount }} 封未读</b></div>
           <div class="stat-sub" v-else>全部已读</div>
         </div>
-        <div class="stat-icon blue"><el-icon><Inbox /></el-icon></div>
+        <div class="stat-icon blue"><el-icon><MessageBox /></el-icon></div>
       </div>
       <div class="stat-card" @click="switchFolder('starred')">
         <div class="stat-info">
@@ -78,7 +78,7 @@
           </div>
           <div class="folder-list">
             <div class="folder-item" :class="{active: activeFolder==='inbox'}" @click="switchFolder('inbox')">
-              <el-icon class="fold-ic"><Inbox /></el-icon>
+              <el-icon class="fold-ic"><MessageBox /></el-icon>
               <span>收件箱</span>
               <el-tag v-if="unreadCount" type="danger" size="small" round effect="dark">{{ unreadCount }}</el-tag>
             </div>
@@ -450,7 +450,7 @@
 import { ref, computed, reactive, watch, nextTick } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import {
-  Avatar, Link, EditPen, Inbox, Star, StarFilled, DocumentCopy, Promotion, Delete, Refresh,
+  Avatar, Link, EditPen, MessageBox, Star, StarFilled, DocumentCopy, Promotion, Delete, Refresh,
   Search, Back, ChatDotRound, Right, Warning, WarningFilled, Paperclip, CaretTop, CaretBottom,
   ChatLineRound, OfficeBuilding, List, ArrowDown, Connection, Check
 } from '@element-plus/icons-vue'

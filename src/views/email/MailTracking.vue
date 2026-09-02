@@ -694,7 +694,7 @@ const evType = e => ({
 const evIcon = e => markRaw(({
   pending: Clock, sending: Connection, sent: Promotion, delivered: CircleCheck,
   opened: View, clicked: Link, replied: ChatLineRound, bounced: CircleClose, failed: Warning
-}[e] || Mail))
+}[e] || Message))
 const evTypeTag = e => ({
   pending: '系统', sending: 'SMTP', sent: '外发', delivered: '送达',
   opened: '行为', clicked: '行为', replied: '客户', bounced: '错误', failed: '错误'
@@ -849,4 +849,4 @@ const exportCustomerTracking = () => ElMessage.success('模拟：已导出「客
   &.inbox { border-left: 4px solid #2563eb !important; }
   &.outbox { border-left: 4px solid #10b981 !important; }
 }
-</styl
+</style>
